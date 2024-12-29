@@ -1,0 +1,37 @@
+header {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #222;
+
+    h1 {
+        width: 94%;
+    }
+     
+    nav {
+        width: 100%;
+        
+        ul {
+            gap: 30px;
+            display: flex;
+            list-style: none;
+            justify-content: start;
+
+            .button {
+                padding: 8px;
+                border-radius: 8px;
+                border: solid 1px rgb(170, 170, 170);
+                text-decoration: none;
+                background-color: #444444;
+            }
+
+            .active {
+                color: #222;
+                border: solid 1px #444444;
+                background-color: rgb(170, 170, 170);
+            }
+        }
+    }
+}
