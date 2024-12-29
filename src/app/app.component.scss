@@ -1,5 +1,4 @@
 header {
-    padding-left: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -7,7 +6,7 @@ header {
     background-color: #222;
 
     h1 {
-        width: 94%;
+        width: 100%;
     }
      
     nav {
@@ -25,12 +24,6 @@ header {
                 border: solid 1px rgb(170, 170, 170);
                 text-decoration: none;
                 background-color: #444444;
-            }
-
-            .active {
-                color: #222;
-                border: solid 1px #444444;
-                background-color: rgb(170, 170, 170);
             }
         }
     }

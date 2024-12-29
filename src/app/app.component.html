@@ -2,22 +2,11 @@
   <h1>AppComponent</h1>
   <nav>
     <ul>
-      <li>
-        <a class="button" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">
-         Home Component
-        </a>
-      </li>
-      <li>
-        <a class="button" routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">
-         About Component
-        </a>
-      </li>
-      <li>
-        <a class="button" routerLink="/profile/2" routerLinkActive="active" ariaCurrentWhenActive="page">
-         Profile Component
-        </a>
-      </li>
+      <li><a class="button" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home Component</a></li>
+      <li><a class="button" routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About Component</a></li>
+      <li><a class="button" [routerLink]="['/profile',3]" routerLinkActive="active" ariaCurrentWhenActive="page">Profile Component</a></li>
     </ul>
   </nav>
 </header>
+
 <router-outlet></router-outlet>

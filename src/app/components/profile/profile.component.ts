@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +8,27 @@ import { Component, Input } from '@angular/core';
   styleUrl: './profile.component.scss'
 })
 export class ProfileComponent {
-  public x!: number;
 
-  @Input() set id(itemId: number) {
-    this.x = itemId;
-  }
+  /**
+   * Primeira versão para pegar dados de uma url
+   * 
+   * public x !: number; // Declaração de uma variavel para receber o dado da url
+   * 
+   * @Input() set id (itemId: number) {
+   *    this.x = itemId;
+   * }
+   */
+
+  /**
+   * Segunda versão para pegar dados de uma url
+   * 
+   * public x : number = 0;
+   * 
+   * private _router: ActivatedRoute = inject(ActivatedRoute);
+   * 
+   * ngOnInit(): void {
+   *   this.x = parseInt(this._router.snapshot.params['id'],10);
+   * }
+   */
+  
 }
