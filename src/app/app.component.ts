@@ -4,9 +4,9 @@ import { ActivatedRoute, Route, Router, RouterLink, RouterLinkActive, RouterOutl
 @Component({
   selector: 'app-root',
   imports: [
-    // RouterLink,
+    RouterLink,
     RouterOutlet,
-    // RouterLinkActive,
+    RouterLinkActive,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -17,6 +17,8 @@ export class AppComponent {
   private _router: Router= inject(Router);
 
   mudarPagina(number: number) {
-    this._router.navigate([`/about/${number}`])
+    this._router.navigate([`/x`], {
+      queryParams: {number: number}
+    });
   }
 }
